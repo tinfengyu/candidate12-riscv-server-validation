@@ -1,0 +1,18 @@
+
+/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/local-binaries/candidate12-controlled:     file format elf64-littleriscv
+
+
+Disassembly of section .text:
+
+0000000000011420 <candidate12_extract>:
+   11420:	00157513          	andi	a0,a0,1
+   11424:	00050a63          	beqz	a0,11438 <candidate12_extract+0x18>
+   11428:	0d85f057          	vsetvli	zero,a1,e64,m1,ta,ma
+   1142c:	02848457          	vadd.vv	v8,v8,v9
+   11430:	02067427          	vse64.v	v8,(a2)
+   11434:	0100006f          	j	11444 <candidate12_extract+0x24>
+   11438:	cd83f057          	vsetivli	zero,7,e64,m1,ta,ma
+   1143c:	0a848457          	vsub.vv	v8,v8,v9
+   11440:	02067427          	vse64.v	v8,(a2)
+   11444:	42802557          	vmv.x.s	a0,v8
+   11448:	00008067          	ret

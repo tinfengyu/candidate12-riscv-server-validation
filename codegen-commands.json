@@ -1,0 +1,402 @@
+[
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/evidence/baseline-llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/extract.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/baseline-default-extract.s"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/evidence/baseline-llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-filetype=obj",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/extract.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/baseline-default-extract.o"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/evidence/baseline-llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-stop-after=riscv-insert-vsetvli",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/extract.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/baseline-default-extract.mir"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/build/bin/llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/extract.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/candidate12-default-extract.s"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/build/bin/llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-filetype=obj",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/extract.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/candidate12-default-extract.o"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/build/bin/llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-stop-after=riscv-insert-vsetvli",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/extract.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/candidate12-default-extract.mir"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/evidence/baseline-llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-disable-tail-duplicate",
+      "-tail-dup-placement=false",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/extract.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/baseline-controlled-extract.s"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/evidence/baseline-llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-disable-tail-duplicate",
+      "-tail-dup-placement=false",
+      "-filetype=obj",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/extract.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/baseline-controlled-extract.o"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/evidence/baseline-llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-disable-tail-duplicate",
+      "-tail-dup-placement=false",
+      "-stop-after=riscv-insert-vsetvli",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/extract.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/baseline-controlled-extract.mir"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/build/bin/llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-disable-tail-duplicate",
+      "-tail-dup-placement=false",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/extract.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/candidate12-controlled-extract.s"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/build/bin/llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-disable-tail-duplicate",
+      "-tail-dup-placement=false",
+      "-filetype=obj",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/extract.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/candidate12-controlled-extract.o"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/build/bin/llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-disable-tail-duplicate",
+      "-tail-dup-placement=false",
+      "-stop-after=riscv-insert-vsetvli",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/extract.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/candidate12-controlled-extract.mir"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/evidence/baseline-llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/copy.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/baseline-default-copy.s"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/evidence/baseline-llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-filetype=obj",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/copy.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/baseline-default-copy.o"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/evidence/baseline-llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-stop-after=riscv-insert-vsetvli",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/copy.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/baseline-default-copy.mir"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/build/bin/llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/copy.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/candidate12-default-copy.s"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/build/bin/llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-filetype=obj",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/copy.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/candidate12-default-copy.o"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/build/bin/llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-stop-after=riscv-insert-vsetvli",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/copy.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/candidate12-default-copy.mir"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/evidence/baseline-llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-disable-tail-duplicate",
+      "-tail-dup-placement=false",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/copy.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/baseline-controlled-copy.s"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/evidence/baseline-llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-disable-tail-duplicate",
+      "-tail-dup-placement=false",
+      "-filetype=obj",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/copy.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/baseline-controlled-copy.o"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/evidence/baseline-llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-disable-tail-duplicate",
+      "-tail-dup-placement=false",
+      "-stop-after=riscv-insert-vsetvli",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/copy.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/baseline-controlled-copy.mir"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/build/bin/llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-disable-tail-duplicate",
+      "-tail-dup-placement=false",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/copy.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/candidate12-controlled-copy.s"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/build/bin/llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-disable-tail-duplicate",
+      "-tail-dup-placement=false",
+      "-filetype=obj",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/copy.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/candidate12-controlled-copy.o"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/tinfeng/llvm-project/investigation-candidate12-implementation/build/bin/llc",
+      "-O2",
+      "-mtriple=riscv64-unknown-linux-gnu",
+      "-mattr=+m,+a,+f,+d,+v,-c",
+      "-target-abi=lp64d",
+      "-verify-machineinstrs",
+      "-disable-tail-duplicate",
+      "-tail-dup-placement=false",
+      "-stop-after=riscv-insert-vsetvli",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/copy.ll",
+      "-o",
+      "/home/tinfeng/llvm-project/investigation-candidate12-hardware/package/candidate12-controlled-copy.mir"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  }
+]

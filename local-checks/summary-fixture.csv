@@ -1,0 +1,8 @@
+pipeline,consumer,round,order,label,reported_consumer,iters,vlenb,elapsed_ns,checksum,correctness
+default,extract,1,1,baseline,extract,10,16,10,0,PASS
+default,extract,2,1,baseline,extract,10,16,20,0,PASS
+default,extract,3,1,baseline,extract,10,16,30,0,PASS
+default,extract,4,1,baseline,extract,10,16,40,0,PASS
+default,extract,1,2,candidate12,extract,10,16,10,0,PASS
+default,extract,2,2,candidate12,extract,10,16,20,0,PASS
+default,extract,3,2,candidate12,extract,10,16,50,0,PASS

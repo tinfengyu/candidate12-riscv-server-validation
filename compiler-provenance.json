@@ -1,0 +1,12 @@
+{
+  "baseline": {
+    "path": "/home/tinfeng/llvm-project/investigation-candidate12-implementation/evidence/baseline-llc",
+    "sha256": "5e297d5559fd70dc06aad1512faa002064021501e8e8bc892d5b06c18d3ec505",
+    "version": "LLVM (http://llvm.org/):\n  LLVM version 24.0.0git\n  Optimized build with assertions.\n  Default target: \n  Host CPU: raptorlake\n\n  Registered Targets:\n    riscv32   - 32-bit RISC-V\n    riscv32be - 32-bit big endian RISC-V\n    riscv64   - 64-bit RISC-V\n    riscv64be - 64-bit big endian RISC-V\n"
+  },
+  "candidate12": {
+    "path": "/home/tinfeng/llvm-project/investigation-candidate12-implementation/build/bin/llc",
+    "sha256": "7d0abf4356723af1be306097f8758d7ee8c9e4f85faa668b007a824517b6fd38",
+    "version": "LLVM (http://llvm.org/):\n  LLVM version 24.0.0git\n  Optimized build with assertions.\n  Default target: \n  Host CPU: raptorlake\n\n  Registered Targets:\n    riscv32   - 32-bit RISC-V\n    riscv32be - 32-bit big endian RISC-V\n    riscv64   - 64-bit RISC-V\n    riscv64be - 64-bit big endian RISC-V\n"
+  }
+}
