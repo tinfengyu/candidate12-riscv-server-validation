@@ -1,0 +1,21 @@
+
+/home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/run-20261003T100451Z-4023730/candidate12-default:     file format elf64-littleriscv
+
+
+Disassembly of section .plt:
+
+Disassembly of section .text:
+
+00000000000015a0 <candidate12_copy>:
+    15a0:	00157513          	andi	a0,a0,1
+    15a4:	00050c63          	beqz	a0,15bc <candidate12_copy+0x1c>
+    15a8:	0d85f057          	vsetvli	zero,a1,e64,m1,ta,ma
+    15ac:	02848457          	vadd.vv	v8,v8,v9
+    15b0:	02067427          	vse64.v	v8,(a2)
+    15b4:	9ea03457          	vmv1r.v	v8,v10
+    15b8:	00008067          	ret
+    15bc:	cd03f057          	vsetivli	zero,7,e32,m1,ta,ma
+    15c0:	02848457          	vadd.vv	v8,v8,v9
+    15c4:	02066427          	vse32.v	v8,(a2)
+    15c8:	9ea03457          	vmv1r.v	v8,v10
+    15cc:	00008067          	ret

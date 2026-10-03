@@ -1,0 +1,106 @@
+
+/home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default:     file format elf64-littleriscv
+
+SYMBOL TABLE:
+00000000000002a8 l    d  .note.gnu.build-id	0000000000000000              .note.gnu.build-id
+00000000000002cc l    d  .interp	0000000000000000              .interp
+00000000000002f0 l    d  .gnu.hash	0000000000000000              .gnu.hash
+0000000000000318 l    d  .dynsym	0000000000000000              .dynsym
+0000000000000558 l    d  .dynstr	0000000000000000              .dynstr
+00000000000006b8 l    d  .gnu.version	0000000000000000              .gnu.version
+00000000000006e8 l    d  .gnu.version_r	0000000000000000              .gnu.version_r
+0000000000000748 l    d  .rela.dyn	0000000000000000              .rela.dyn
+0000000000000838 l    d  .rela.plt	0000000000000000              .rela.plt
+00000000000009c0 l    d  .plt	0000000000000000              .plt
+0000000000000ae0 l    d  .text	0000000000000000              .text
+00000000000015d0 l    d  .rodata	0000000000000000              .rodata
+0000000000001810 l    d  .eh_frame_hdr	0000000000000000              .eh_frame_hdr
+0000000000001868 l    d  .eh_frame	0000000000000000              .eh_frame
+0000000000001a28 l    d  .note.ABI-tag	0000000000000000              .note.ABI-tag
+0000000000001a48 l    d  .note.package	0000000000000000              .note.package
+0000000000002d20 l    d  .preinit_array	0000000000000000              .preinit_array
+0000000000002d28 l    d  .init_array	0000000000000000              .init_array
+0000000000002d30 l    d  .fini_array	0000000000000000              .fini_array
+0000000000002d38 l    d  .dynamic	0000000000000000              .dynamic
+0000000000002f38 l    d  .got	0000000000000000              .got
+0000000000003000 l    d  .data	0000000000000000              .data
+0000000000003008 l    d  .bss	0000000000000000              .bss
+0000000000000000 l    d  .comment	0000000000000000              .comment
+0000000000000000 l    d  .riscv.attributes	0000000000000000              .riscv.attributes
+0000000000000000 l    df *ABS*	0000000000000000              Scrt1.o
+0000000000001152 l       .text	0000000000000000              load_gp
+0000000000001a28 l     O .note.ABI-tag	0000000000000020              __abi_tag
+0000000000000000 l    df *ABS*	0000000000000000              runner.c
+000000000000122c l     F .text	0000000000000022              illegal
+000000000000124e l     F .text	00000000000000ec              initialize
+000000000000133a l     F .text	000000000000002c              fail
+0000000000001366 l     F .text	0000000000000076              allocate
+00000000000013dc l     F .text	000000000000012a              check_memory
+00000000000017f0 l     O .rodata	000000000000001d              Msg.0
+0000000000003010 l     O .bss	0000000000000008              Bytes
+0000000000003018 l     O .bss	0000000000000008              X
+0000000000003020 l     O .bss	0000000000000008              Y
+0000000000003028 l     O .bss	0000000000000008              Z
+0000000000003030 l     O .bss	0000000000000008              Mem
+0000000000003038 l     O .bss	0000000000000008              Returned
+0000000000000000 l    df *ABS*	0000000000000000              crtstuff.c
+000000000000115e l     F .text	0000000000000000              deregister_tm_clones
+0000000000001194 l     F .text	0000000000000000              register_tm_clones
+00000000000011d4 l     F .text	0000000000000000              __do_global_dtors_aux
+0000000000003008 l     O .bss	0000000000000001              completed.0
+0000000000002d30 l     O .fini_array	0000000000000000              __do_global_dtors_aux_fini_array_entry
+0000000000001216 l     F .text	0000000000000000              frame_dummy
+0000000000002d28 l     O .init_array	0000000000000000              __frame_dummy_init_array_entry
+0000000000000000 l    df *ABS*	0000000000000000              wrappers.o
+0000000000000000 l    df *ABS*	0000000000000000              extract.ll
+0000000000000000 l    df *ABS*	0000000000000000              copy.ll
+0000000000000000 l    df *ABS*	0000000000000000              crtstuff.c
+0000000000001a24 l     O .eh_frame	0000000000000000              __FRAME_END__
+00000000000009c0 l     O *ABS*	0000000000000000              _PROCEDURE_LINKAGE_TABLE_
+0000000000002d38 l     O *ABS*	0000000000000000              _DYNAMIC
+0000000000001810 l       .eh_frame_hdr	0000000000000000              __GNU_EH_FRAME_HDR
+0000000000002fc8 l     O *ABS*	0000000000000000              _GLOBAL_OFFSET_TABLE_
+0000000000001562 g     F .text	0000000000000006              c12_vl64
+0000000000000000       F *UND*	0000000000000000              __libc_start_main@GLIBC_2.34
+0000000000000000  w      *UND*	0000000000000000              _ITM_deregisterTMCloneTable
+0000000000003000  w      .data	0000000000000000              data_start
+0000000000000000       F *UND*	0000000000000000              __isoc23_strtoull@GLIBC_2.38
+0000000000003040 g       .bss	0000000000000000              __BSS_END__
+0000000000000000       F *UND*	0000000000000000              memcmp@GLIBC_2.27
+0000000000003008 g       .data	0000000000000000              _edata
+0000000000003008 g       .data	0000000000000000              __SDATA_BEGIN__
+0000000000000000       F *UND*	0000000000000000              __fprintf_chk@GLIBC_2.27
+0000000000003000 g       .data	0000000000000000              __DATA_BEGIN__
+0000000000000000       F *UND*	0000000000000000              __printf_chk@GLIBC_2.27
+0000000000000000       F *UND*	0000000000000000              __errno_location@GLIBC_2.27
+0000000000000000       F *UND*	0000000000000000              _Exit@GLIBC_2.27
+0000000000000000       F *UND*	0000000000000000              __stack_chk_fail@GLIBC_2.27
+0000000000001568 g     F .text	0000000000000006              c12_vl32
+000000000000152c g     F .text	0000000000000030              c12_run_copy
+0000000000003000 g       .data	0000000000000000              __data_start
+0000000000000000       O *UND*	0000000000000000              __stack_chk_guard@GLIBC_2.27
+0000000000003000 g     O .data	0000000000000000              .hidden __dso_handle
+0000000000000000       F *UND*	0000000000000000              clock_gettime@GLIBC_2.27
+00000000000015d0 g     O .rodata	0000000000000004              _IO_stdin_used
+0000000000000000       F *UND*	0000000000000000              posix_memalign@GLIBC_2.27
+0000000000001570 g     F .text	0000000000000030              0x80 candidate12_extract
+0000000000001508 g     F .text	0000000000000024              c12_run_extract
+0000000000003040 g       .bss	0000000000000000              _end
+0000000000001128 g     F .text	000000000000002a              _start
+000000000000155c g     F .text	0000000000000006              c12_vlen_bytes
+0000000000003800 g       *ABS*	0000000000000000              __global_pointer$
+0000000000003008 g       .bss	0000000000000000              __bss_start
+0000000000000ae0 g     F .text	0000000000000646              main
+0000000000000000       F *UND*	0000000000000000              exit@GLIBC_2.27
+00000000000015a0 g     F .text	0000000000000030              0x80 candidate12_copy
+0000000000000000       O *UND*	0000000000000000              stderr@GLIBC_2.27
+0000000000000000       F *UND*	0000000000000000              sigaction@GLIBC_2.27
+0000000000000000  w    F *UND*	0000000000000000              __cxa_finalize@GLIBC_2.27
+0000000000000000       F *UND*	0000000000000000              write@GLIBC_2.27
+0000000000003008 g     O .data	0000000000000000              .hidden __TMC_END__
+0000000000000000  w      *UND*	0000000000000000              _ITM_registerTMCloneTable
+0000000000000000       F *UND*	0000000000000000              strcmp@GLIBC_2.27
+0000000000000000       F *UND*	0000000000000000              sigemptyset@GLIBC_2.27
+0000000000000000       F *UND*	0000000000000000              memset@GLIBC_2.27
+
+

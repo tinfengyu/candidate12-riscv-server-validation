@@ -1,0 +1,115 @@
++ gcc -O2 -fno-lto -fno-tree-vectorize -march=rv64gc -mabi=lp64d -Wall -Wextra -Werror -c runner.c -o /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/runner.o
++ gcc -fno-lto -march=rv64gcv -mabi=lp64d -c wrappers.S -o /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/wrappers.o
++ printf 'pipeline,label,consumer,symbol,instructions,symbol_bytes,decoded_bytes,setups,expected_instructions,expected_bytes,expected_setups,mapping\n'
++ for pipeline in default controlled
++ for label in baseline candidate12
++ exe=/home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default
++ gcc -fno-lto -march=rv64gcv -mabi=lp64d -Wl,--no-relax /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/runner.o /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/wrappers.o baseline-default-extract.o baseline-default-copy.o -o /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default
++ sha256sum /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default
++ objdump -d /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default
++ objdump -d --disassemble=candidate12_extract /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default
++ objdump -d --disassemble=candidate12_copy /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default
++ objdump -t /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default
++ readelf -h /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default
++ readelf -A /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default
++ awk '/Class:/ && /ELF64/ {cls=1} /Data:/ && /little endian/ {le=1} /Machine:/ && /RISC-V/ {rv=1} /Flags:/ && /double-float ABI/ && !/RVE/ {abi=1} END {exit !(cls && le && rv && abi)}' /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default.elf-header.txt
++ awk -F '"' '/Tag_RISCV_arch:/ {if ($2 ~ /^rv64/ && $2 ~ /_v1p0(_|$)/) ok=1} END {exit !ok}' /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default.elf-attributes.txt
++ expected_instructions=12
++ expected_bytes=48
++ expected_setups=3
++ [[ baseline == candidate12 ]]
++ for consumer in extract copy
++ awk -v pipeline=default -v label=baseline -v consumer=extract -v symbol=candidate12_extract -v expected_instructions=12 -v expected_bytes=48 -v expected_setups=3 -f check-mapping.awk /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default.symbols.txt /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default.extract.txt
++ for consumer in extract copy
++ awk -v pipeline=default -v label=baseline -v consumer=copy -v symbol=candidate12_copy -v expected_instructions=12 -v expected_bytes=48 -v expected_setups=3 -f check-mapping.awk /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default.symbols.txt /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default.copy.txt
++ for label in baseline candidate12
++ exe=/home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-default
++ gcc -fno-lto -march=rv64gcv -mabi=lp64d -Wl,--no-relax /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/runner.o /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/wrappers.o candidate12-default-extract.o candidate12-default-copy.o -o /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-default
++ sha256sum /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-default
++ objdump -d /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-default
++ objdump -d --disassemble=candidate12_extract /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-default
++ objdump -d --disassemble=candidate12_copy /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-default
++ objdump -t /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-default
++ readelf -h /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-default
++ readelf -A /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-default
++ awk '/Class:/ && /ELF64/ {cls=1} /Data:/ && /little endian/ {le=1} /Machine:/ && /RISC-V/ {rv=1} /Flags:/ && /double-float ABI/ && !/RVE/ {abi=1} END {exit !(cls && le && rv && abi)}' /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-default.elf-header.txt
++ awk -F '"' '/Tag_RISCV_arch:/ {if ($2 ~ /^rv64/ && $2 ~ /_v1p0(_|$)/) ok=1} END {exit !ok}' /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-default.elf-attributes.txt
++ expected_instructions=12
++ expected_bytes=48
++ expected_setups=3
++ [[ candidate12 == candidate12 ]]
++ expected_setups=2
++ [[ default == controlled ]]
++ for consumer in extract copy
++ awk -v pipeline=default -v label=candidate12 -v consumer=extract -v symbol=candidate12_extract -v expected_instructions=12 -v expected_bytes=48 -v expected_setups=2 -f check-mapping.awk /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-default.symbols.txt /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-default.extract.txt
++ for consumer in extract copy
++ awk -v pipeline=default -v label=candidate12 -v consumer=copy -v symbol=candidate12_copy -v expected_instructions=12 -v expected_bytes=48 -v expected_setups=2 -f check-mapping.awk /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-default.symbols.txt /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-default.copy.txt
++ for pipeline in default controlled
++ for label in baseline candidate12
++ exe=/home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled
++ gcc -fno-lto -march=rv64gcv -mabi=lp64d -Wl,--no-relax /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/runner.o /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/wrappers.o baseline-controlled-extract.o baseline-controlled-copy.o -o /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled
++ sha256sum /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled
++ objdump -d /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled
++ objdump -d --disassemble=candidate12_extract /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled
++ objdump -d --disassemble=candidate12_copy /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled
++ objdump -t /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled
++ readelf -h /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled
++ readelf -A /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled
++ awk '/Class:/ && /ELF64/ {cls=1} /Data:/ && /little endian/ {le=1} /Machine:/ && /RISC-V/ {rv=1} /Flags:/ && /double-float ABI/ && !/RVE/ {abi=1} END {exit !(cls && le && rv && abi)}' /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled.elf-header.txt
++ awk -F '"' '/Tag_RISCV_arch:/ {if ($2 ~ /^rv64/ && $2 ~ /_v1p0(_|$)/) ok=1} END {exit !ok}' /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled.elf-attributes.txt
++ expected_instructions=12
++ expected_bytes=48
++ expected_setups=3
++ [[ baseline == candidate12 ]]
++ for consumer in extract copy
++ awk -v pipeline=controlled -v label=baseline -v consumer=extract -v symbol=candidate12_extract -v expected_instructions=12 -v expected_bytes=48 -v expected_setups=3 -f check-mapping.awk /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled.symbols.txt /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled.extract.txt
++ for consumer in extract copy
++ awk -v pipeline=controlled -v label=baseline -v consumer=copy -v symbol=candidate12_copy -v expected_instructions=12 -v expected_bytes=48 -v expected_setups=3 -f check-mapping.awk /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled.symbols.txt /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled.copy.txt
++ for label in baseline candidate12
++ exe=/home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-controlled
++ gcc -fno-lto -march=rv64gcv -mabi=lp64d -Wl,--no-relax /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/runner.o /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/wrappers.o candidate12-controlled-extract.o candidate12-controlled-copy.o -o /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-controlled
++ sha256sum /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-controlled
++ objdump -d /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-controlled
++ objdump -d --disassemble=candidate12_extract /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-controlled
++ objdump -d --disassemble=candidate12_copy /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-controlled
++ objdump -t /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-controlled
++ readelf -h /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-controlled
++ readelf -A /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-controlled
++ awk '/Class:/ && /ELF64/ {cls=1} /Data:/ && /little endian/ {le=1} /Machine:/ && /RISC-V/ {rv=1} /Flags:/ && /double-float ABI/ && !/RVE/ {abi=1} END {exit !(cls && le && rv && abi)}' /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-controlled.elf-header.txt
++ awk -F '"' '/Tag_RISCV_arch:/ {if ($2 ~ /^rv64/ && $2 ~ /_v1p0(_|$)/) ok=1} END {exit !ok}' /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-controlled.elf-attributes.txt
++ expected_instructions=12
++ expected_bytes=48
++ expected_setups=3
++ [[ candidate12 == candidate12 ]]
++ expected_setups=2
++ [[ controlled == controlled ]]
++ expected_instructions=11
++ expected_bytes=44
++ for consumer in extract copy
++ awk -v pipeline=controlled -v label=candidate12 -v consumer=extract -v symbol=candidate12_extract -v expected_instructions=11 -v expected_bytes=44 -v expected_setups=2 -f check-mapping.awk /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-controlled.symbols.txt /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-controlled.extract.txt
++ for consumer in extract copy
++ awk -v pipeline=controlled -v label=candidate12 -v consumer=copy -v symbol=candidate12_copy -v expected_instructions=11 -v expected_bytes=44 -v expected_setups=2 -f check-mapping.awk /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-controlled.symbols.txt /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-controlled.copy.txt
++ for pipeline in default controlled
++ for label in baseline candidate12
++ exe=/home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default
++ taskset -c 0 /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default --probe
++ taskset -c 0 /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default --check
++ for label in baseline candidate12
++ exe=/home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-default
++ taskset -c 0 /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-default --probe
++ taskset -c 0 /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-default --check
++ for pipeline in default controlled
++ for label in baseline candidate12
++ exe=/home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled
++ taskset -c 0 /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled --probe
++ taskset -c 0 /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled --check
++ for label in baseline candidate12
++ exe=/home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-controlled
++ taskset -c 0 /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-controlled --probe
++ taskset -c 0 /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-controlled --check
++ set +x
+/home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-default: OK
+/home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-default: OK
+/home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled: OK
+/home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/candidate12-controlled: OK
+Completed local native run: /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3

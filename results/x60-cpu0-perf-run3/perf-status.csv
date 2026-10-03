@@ -1,0 +1,9 @@
+pipeline,consumer,label,exit_status
+default,extract,baseline,0
+default,extract,candidate12,0
+default,copy,baseline,0
+default,copy,candidate12,0
+controlled,extract,baseline,0
+controlled,extract,candidate12,0
+controlled,copy,baseline,0
+controlled,copy,candidate12,0

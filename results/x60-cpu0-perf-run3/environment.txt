@@ -1,0 +1,272 @@
+Sat Oct  3 10:08:32 UTC 2026
+Linux bpf3-16G-2 6.6.63 #2.2.7.3 SMP PREEMPT Fri Aug 15 06:14:36 UTC 2025 riscv64 riscv64 riscv64 GNU/Linux
+gcc (Bianbu 14.2.0-19ubuntu2bb3) 14.2.0
+Copyright (C) 2024 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+GNU objdump (GNU Binutils for Ubuntu) 2.44
+Copyright (C) 2025 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) any later version.
+This program has absolutely no warranty.
+GNU readelf (GNU Binutils for Ubuntu) 2.44
+Copyright (C) 2025 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) any later version.
+This program has absolutely no warranty.
+package=/home/users/tinfeng/llvm-project/candidate12-riscv-server-validation
+ITERS=1000000
+ROUNDS=30
+CPU=0
+PERF=1
+processor	: 0
+hart		: 0
+model name	: Spacemit(R) X60
+isa		: rv64imafdcv_zicbom_zicboz_zicntr_zicond_zicsr_zifencei_zihintpause_zihpm_zfh_zfhmin_zca_zcd_zba_zbb_zbc_zbs_zkt_zve32f_zve32x_zve64d_zve64f_zve64x_zvfh_zvfhmin_zvkt_sscofpmf_sstc_svinval_svnapot_svpbmt_ime
+mmu		: sv39
+uarch		: spacemit,x60
+mvendorid	: 0x710
+marchid		: 0x8000000058000001
+mimpid		: 0x1000000049772200
+
+processor	: 1
+hart		: 1
+model name	: Spacemit(R) X60
+isa		: rv64imafdcv_zicbom_zicboz_zicntr_zicond_zicsr_zifencei_zihintpause_zihpm_zfh_zfhmin_zca_zcd_zba_zbb_zbc_zbs_zkt_zve32f_zve32x_zve64d_zve64f_zve64x_zvfh_zvfhmin_zvkt_sscofpmf_sstc_svinval_svnapot_svpbmt_ime
+mmu		: sv39
+uarch		: spacemit,x60
+mvendorid	: 0x710
+marchid		: 0x8000000058000001
+mimpid		: 0x1000000049772200
+
+processor	: 2
+hart		: 2
+model name	: Spacemit(R) X60
+isa		: rv64imafdcv_zicbom_zicboz_zicntr_zicond_zicsr_zifencei_zihintpause_zihpm_zfh_zfhmin_zca_zcd_zba_zbb_zbc_zbs_zkt_zve32f_zve32x_zve64d_zve64f_zve64x_zvfh_zvfhmin_zvkt_sscofpmf_sstc_svinval_svnapot_svpbmt_ime
+mmu		: sv39
+uarch		: spacemit,x60
+mvendorid	: 0x710
+marchid		: 0x8000000058000001
+mimpid		: 0x1000000049772200
+
+processor	: 3
+hart		: 3
+model name	: Spacemit(R) X60
+isa		: rv64imafdcv_zicbom_zicboz_zicntr_zicond_zicsr_zifencei_zihintpause_zihpm_zfh_zfhmin_zca_zcd_zba_zbb_zbc_zbs_zkt_zve32f_zve32x_zve64d_zve64f_zve64x_zvfh_zvfhmin_zvkt_sscofpmf_sstc_svinval_svnapot_svpbmt_ime
+mmu		: sv39
+uarch		: spacemit,x60
+mvendorid	: 0x710
+marchid		: 0x8000000058000001
+mimpid		: 0x1000000049772200
+
+processor	: 4
+hart		: 4
+model name	: Spacemit(R) X60
+isa		: rv64imafdcv_zicbom_zicboz_zicntr_zicond_zicsr_zifencei_zihintpause_zihpm_zfh_zfhmin_zca_zcd_zba_zbb_zbc_zbs_zkt_zve32f_zve32x_zve64d_zve64f_zve64x_zvfh_zvfhmin_zvkt_sscofpmf_sstc_svinval_svnapot_svpbmt
+mmu		: sv39
+uarch		: spacemit,x60
+mvendorid	: 0x710
+marchid		: 0x8000000058000001
+mimpid		: 0x1000000049772200
+
+processor	: 5
+hart		: 5
+model name	: Spacemit(R) X60
+isa		: rv64imafdcv_zicbom_zicboz_zicntr_zicond_zicsr_zifencei_zihintpause_zihpm_zfh_zfhmin_zca_zcd_zba_zbb_zbc_zbs_zkt_zve32f_zve32x_zve64d_zve64f_zve64x_zvfh_zvfhmin_zvkt_sscofpmf_sstc_svinval_svnapot_svpbmt
+mmu		: sv39
+uarch		: spacemit,x60
+mvendorid	: 0x710
+marchid		: 0x8000000058000001
+mimpid		: 0x1000000049772200
+
+processor	: 6
+hart		: 6
+model name	: Spacemit(R) X60
+isa		: rv64imafdcv_zicbom_zicboz_zicntr_zicond_zicsr_zifencei_zihintpause_zihpm_zfh_zfhmin_zca_zcd_zba_zbb_zbc_zbs_zkt_zve32f_zve32x_zve64d_zve64f_zve64x_zvfh_zvfhmin_zvkt_sscofpmf_sstc_svinval_svnapot_svpbmt
+mmu		: sv39
+uarch		: spacemit,x60
+mvendorid	: 0x710
+marchid		: 0x8000000058000001
+mimpid		: 0x1000000049772200
+
+processor	: 7
+hart		: 7
+model name	: Spacemit(R) X60
+isa		: rv64imafdcv_zicbom_zicboz_zicntr_zicond_zicsr_zifencei_zihintpause_zihpm_zfh_zfhmin_zca_zcd_zba_zbb_zbc_zbs_zkt_zve32f_zve32x_zve64d_zve64f_zve64x_zvfh_zvfhmin_zvkt_sscofpmf_sstc_svinval_svnapot_svpbmt
+mmu		: sv39
+uarch		: spacemit,x60
+mvendorid	: 0x710
+marchid		: 0x8000000058000001
+mimpid		: 0x1000000049772200
+
+Name:	cat
+Umask:	0022
+State:	R (running)
+Tgid:	4024475
+Ngid:	0
+Pid:	4024475
+PPid:	4024459
+TracerPid:	0
+Uid:	1003	1003	1003	1003
+Gid:	10012	10012	10012	10012
+FDSize:	256
+Groups:	10012 10019 
+NStgid:	4024475
+NSpid:	4024475
+NSpgid:	4024459
+NSsid:	4023680
+Kthread:	0
+VmPeak:	    2304 kB
+VmSize:	    2304 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	     896 kB
+VmRSS:	     896 kB
+RssAnon:	       0 kB
+RssFile:	     896 kB
+RssShmem:	       0 kB
+VmData:	     472 kB
+VmStk:	     132 kB
+VmExe:	      36 kB
+VmLib:	    1632 kB
+VmPTE:	      28 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+CoreDumping:	0
+THP_enabled:	1
+untag_mask:	0xffffffffffffffff
+Threads:	1
+SigQ:	0/61924
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000000000000
+SigCgt:	0000000000000000
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	000001ffffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Seccomp_filters:	0
+Speculation_Store_Bypass:	unknown
+SpeculationIndirectBranch:	unsupported
+Cpus_allowed:	ff
+Cpus_allowed_list:	0-7
+Mems_allowed:	1
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	0
+nonvoluntary_ctxt_switches:	1
+Architecture:        riscv64
+Byte Order:          Little Endian
+CPU(s):              8
+On-line CPU(s) list: 0-7
+Model name:          Spacemit(R) X60
+Thread(s) per core:  0
+Core(s) per socket:  0
+Socket(s):           0
+Model name:          spacemit,x60
+CPU family:          0x8000000058000001
+Model:               0x1000000049772200
+Thread(s) per core:  1
+Core(s) per socket:  1
+Socket(s):           1
+CPU(s) scaling MHz:  100%
+CPU max MHz:         1600.0000
+CPU min MHz:         614.4000
+Model name:          Spacemit(R) X60
+Thread(s) per core:  0
+Core(s) per socket:  0
+Socket(s):           0
+Model name:          spacemit,x60
+CPU family:          0x8000000058000001
+Model:               0x1000000049772200
+Thread(s) per core:  1
+Core(s) per socket:  1
+Socket(s):           1
+CPU(s) scaling MHz:  100%
+CPU max MHz:         1600.0000
+CPU min MHz:         614.4000
+Model name:          Spacemit(R) X60
+Thread(s) per core:  0
+Core(s) per socket:  0
+Socket(s):           0
+Model name:          spacemit,x60
+CPU family:          0x8000000058000001
+Model:               0x1000000049772200
+Thread(s) per core:  1
+Core(s) per socket:  1
+Socket(s):           1
+CPU(s) scaling MHz:  100%
+CPU max MHz:         1600.0000
+CPU min MHz:         614.4000
+Model name:          Spacemit(R) X60
+Thread(s) per core:  0
+Core(s) per socket:  0
+Socket(s):           0
+Model name:          spacemit,x60
+CPU family:          0x8000000058000001
+Model:               0x1000000049772200
+Thread(s) per core:  1
+Core(s) per socket:  1
+Socket(s):           1
+CPU(s) scaling MHz:  100%
+CPU max MHz:         1600.0000
+CPU min MHz:         614.4000
+Model name:          Spacemit(R) X60
+Thread(s) per core:  0
+Core(s) per socket:  0
+Socket(s):           0
+Model name:          spacemit,x60
+CPU family:          0x8000000058000001
+Model:               0x1000000049772200
+Thread(s) per core:  1
+Core(s) per socket:  1
+Socket(s):           1
+CPU(s) scaling MHz:  100%
+CPU max MHz:         1600.0000
+CPU min MHz:         614.4000
+Model name:          Spacemit(R) X60
+Thread(s) per core:  0
+Core(s) per socket:  0
+Socket(s):           0
+Model name:          spacemit,x60
+CPU family:          0x8000000058000001
+Model:               0x1000000049772200
+Thread(s) per core:  1
+Core(s) per socket:  1
+Socket(s):           1
+CPU(s) scaling MHz:  100%
+CPU max MHz:         1600.0000
+CPU min MHz:         614.4000
+Model name:          Spacemit(R) X60
+Thread(s) per core:  0
+Core(s) per socket:  0
+Socket(s):           0
+Model name:          spacemit,x60
+CPU family:          0x8000000058000001
+Model:               0x1000000049772200
+Thread(s) per core:  1
+Core(s) per socket:  1
+Socket(s):           1
+CPU(s) scaling MHz:  100%
+CPU max MHz:         1600.0000
+CPU min MHz:         614.4000
+Model name:          Spacemit(R) X60
+Thread(s) per core:  0
+Core(s) per socket:  0
+Socket(s):           0
+Model name:          spacemit,x60
+CPU family:          0x8000000058000001
+Model:               0x1000000049772200
+Thread(s) per core:  1
+Core(s) per socket:  1
+Socket(s):           1
+CPU(s) scaling MHz:  100%
+CPU max MHz:         1600.0000
+CPU min MHz:         614.4000
+L1d cache:           256 KiB (8 instances)
+L1i cache:           256 KiB (8 instances)
+L2 cache:            1 MiB (2 instances)

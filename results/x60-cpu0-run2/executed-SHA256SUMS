@@ -1,0 +1,4 @@
+33d2f12053537962e6b828b323b7bc6b2039c76184ca11b9f24f6b97744e3ef5  /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-run2/baseline-default
+d8ecd011d5680184fa9aae16413a109afe86363dbf5a4e1442e7edf3c4edb804  /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-run2/candidate12-default
+33d2f12053537962e6b828b323b7bc6b2039c76184ca11b9f24f6b97744e3ef5  /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-run2/baseline-controlled
+71f9fadc6edcb681a28f4f6e6aba6acf2413f09ec03abe219bddad2500472fe6  /home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-run2/candidate12-controlled

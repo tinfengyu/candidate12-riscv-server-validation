@@ -1,0 +1,9 @@
+pipeline,label,consumer,symbol,instructions,symbol_bytes,decoded_bytes,setups,expected_instructions,expected_bytes,expected_setups,mapping
+default,baseline,extract,candidate12_extract,12,48,48,3,12,48,3,PASS
+default,baseline,copy,candidate12_copy,12,48,48,3,12,48,3,PASS
+default,candidate12,extract,candidate12_extract,12,48,48,2,12,48,2,PASS
+default,candidate12,copy,candidate12_copy,12,48,48,2,12,48,2,PASS
+controlled,baseline,extract,candidate12_extract,12,48,48,3,12,48,3,PASS
+controlled,baseline,copy,candidate12_copy,12,48,48,3,12,48,3,PASS
+controlled,candidate12,extract,candidate12_extract,11,44,44,2,11,44,2,PASS
+controlled,candidate12,copy,candidate12_copy,11,44,44,2,11,44,2,PASS

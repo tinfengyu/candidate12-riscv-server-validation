@@ -1,0 +1,21 @@
+
+/home/users/tinfeng/llvm-project/candidate12-riscv-server-validation/results/x60-cpu0-perf-run3/baseline-controlled:     file format elf64-littleriscv
+
+
+Disassembly of section .plt:
+
+Disassembly of section .text:
+
+0000000000001570 <candidate12_extract>:
+    1570:	00157513          	andi	a0,a0,1
+    1574:	00050a63          	beqz	a0,1588 <candidate12_extract+0x18>
+    1578:	0d85f057          	vsetvli	zero,a1,e64,m1,ta,ma
+    157c:	02848457          	vadd.vv	v8,v8,v9
+    1580:	02067427          	vse64.v	v8,(a2)
+    1584:	0100006f          	j	1594 <candidate12_extract+0x24>
+    1588:	cd83f057          	vsetivli	zero,7,e64,m1,ta,ma
+    158c:	0a848457          	vsub.vv	v8,v8,v9
+    1590:	02067427          	vse64.v	v8,(a2)
+    1594:	cd80f057          	vsetivli	zero,1,e64,m1,ta,ma
+    1598:	42802557          	vmv.x.s	a0,v8
+    159c:	00008067          	ret
